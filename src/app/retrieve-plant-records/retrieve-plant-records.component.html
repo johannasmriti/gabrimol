@@ -1,0 +1,112 @@
+<h1>Plant Record for {{ plantId }}</h1>
+<div *ngIf="foundRow">
+  <form (ngSubmit)="onSubmit()">
+    <label
+      >Date:
+      <input type="text" [(ngModel)]="foundRow.Date" name="date" /></label
+    ><br />
+    <label
+      >Plant ID:
+      <input
+        type="text"
+        [(ngModel)]="foundRow.plantID"
+        name="plantId"
+        disabled /></label
+    ><br />
+    <label
+      >Plant Name:
+      <input
+        type="text"
+        [(ngModel)]="foundRow.PlantName"
+        name="plantName" /></label
+    ><br />
+    <label
+      >Age: <input type="text" [(ngModel)]="foundRow.Age" name="age" /></label
+    ><br />
+    <label
+      >Segment:
+      <input type="text" [(ngModel)]="foundRow.Segment" name="segment" /></label
+    ><br />
+    <label
+      >Terrace ID:
+      <input
+        type="text"
+        [(ngModel)]="foundRow.TerraceID"
+        name="terraceId" /></label
+    ><br />
+    <label
+      >GPS Coordinate:
+      <input
+        type="text"
+        [(ngModel)]="foundRow.GPSCoordinate"
+        name="gpsCoordinate" /></label
+    ><br />
+    <label
+      >To Be Fertilised:
+      <input
+        type="text"
+        [(ngModel)]="foundRow.ToBeFertilised"
+        name="toBeFertilised" /></label
+    ><br />
+    <label
+      >To Be Watered:
+      <input
+        type="text"
+        [(ngModel)]="foundRow.ToBeWatered"
+        name="toBeWatered" /></label
+    ><br />
+    <label
+      >To Be Cleaned:
+      <input
+        type="text"
+        [(ngModel)]="foundRow.ToBeCleaned"
+        name="toBeCleaned" /></label
+    ><br />
+    <label
+      >Fruiting Stage:
+      <input
+        type="text"
+        [(ngModel)]="foundRow.FruitingStage"
+        name="fruitingStage" /></label
+    ><br />
+    <label
+      >Remarks:
+      <input type="text" [(ngModel)]="foundRow.Remarks" name="remarks" /></label
+    ><br />
+    <button type="submit">Submit</button>
+  </form>
+</div>
+<div *ngIf="!foundRow">
+  <p>No data found for the given plant ID.</p>
+</div>
+<!-- <div *ngIf="foundRow">
+  <form>
+    <label>Date: {{ foundRow[0] }}</label
+    ><br />
+    <label>Plant ID: {{ foundRow[1] }}</label
+    ><br />
+    <label>Plant Name: {{ foundRow[2] }}</label
+    ><br />
+    <label>Age: {{ foundRow[3] }}</label
+    ><br />
+    <label>Segment: {{ foundRow[4] }}</label
+    ><br />
+    <label>Terrace ID: {{ foundRow[5] }}</label
+    ><br />
+    <label>GPS Coordinate: {{ foundRow[6] }}</label
+    ><br />
+    <label>To Be Fertilised: {{ foundRow[7] }}</label
+    ><br />
+    <label>To Be Watered: {{ foundRow[8] }}</label
+    ><br />
+    <label>To Be Cleaned: {{ foundRow[9] }}</label
+    ><br />
+    <label>Fruiting Stage: {{ foundRow[10] }}</label
+    ><br />
+    <label>Remarks: {{ foundRow[11] }}</label
+    ><br />
+  </form>
+</div>
+<div *ngIf="!foundRow">
+  <p>No data found for the given plant ID.</p>
+</div> -->
