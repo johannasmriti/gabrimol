@@ -10,11 +10,13 @@
     </div>
     <ul class="navbar-menu" [class.active]="isMenuOpen">
       <li class="nav-item"><a href="#">Home</a></li>
-      <li class="nav-item"><a href="#">All Records</a></li>
+      <li class="nav-item">
+        <a routerLink="/all-plant-details">All Records</a>
+      </li>
       <li class="nav-item"><a href="#">Append a Record</a></li>
       <li class="search input-item">
         <input type="text" placeholder="Enter Plant ID" />
-        <button><i class="fa fa-search"></i></button>
+        <button (click)="searchPlant()"><i class="fa fa-search"></i></button>
       </li>
     </ul>
     <div class="hamburger-menu" (click)="toggleMenu()">

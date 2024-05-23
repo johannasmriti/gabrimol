@@ -10,6 +10,7 @@ import {
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterOutlet } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -34,5 +35,14 @@ export class NavbarComponent {
     this.isNavbarHidden =
       currentScroll > this.lastScrollTop && currentScroll > 50;
     this.lastScrollTop = currentScroll;
+  }
+
+  constructor(private router: Router) {}
+
+  searchPlant() {
+    console.log(this.plantId);
+    if (this.plantId) {
+      this.router.navigate(['/plant', this.plantId]);
+    }
   }
 }

@@ -24,7 +24,7 @@
 
 .parallax-container {
   position: relative;
-  height: 100vh;
+  height: 80vh;
   overflow-x: hidden;
   overflow-y: auto;
   margin: 10%;
@@ -53,15 +53,40 @@
 }
 
 .welcome-para {
-  padding-left: 20%;
-  padding-right: 20%;
-  margin-top: 100px;
+  padding-right: 10%;
+  padding-left: 10%;
+  padding-bottom: 10%;
   font-size: 20px;
   font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
-  text-align: center;
+  text-align: justify;
+  text-indent: 10%;
 }
 
+.about-us {
+  /* max-width: 1000px;
+  margin: 50px auto; */
+  padding: 5%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.about-us h1 {
+  font-size: 2.5em;
+  color: #4caf50;
+}
+.about-us p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin: 20px 0;
+}
+.about-us .highlight {
+  color: #ff6347;
+}
+.about-us .emoji {
+  font-size: 1.5em;
+}
 .headline {
   font-size: 50px;
   line-height: 1.0714285714;
@@ -77,7 +102,6 @@
     font-size: 30px; /* Adjust the font size for smaller screens */
   }
 }
-
 .widget-container {
   margin-right: 5%;
   margin-left: 5%;
@@ -87,35 +111,49 @@
 }
 
 .widget {
+  position: relative;
   margin: 10px;
-  width: calc(40% - 20px); /* Adjusted width */
-  height: 400px;
-  width: 250px; /* Fixed height */
-  /* display: flex; */
+  width: 250px; /* Fixed width */
+  height: 400px; /* Fixed height */
   align-items: center;
   justify-content: center;
   text-align: center;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden; /* Ensure content doesn't overflow the border radius */
+}
+
+.widget::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black color with 50% opacity */
+  z-index: 1;
+  border-radius: 10px; /* Match the border radius of the widget */
 }
 
 .view-all {
-  background-color: #ff5733;
+  background-image: url("../../assets/leaf.jpeg");
 }
 
 .modify-records {
-  background-color: #33ffb8;
+  background-image: url("../../assets/dad.jpeg");
 }
 
 .append-records {
-  background-color: #337cff;
+  background-image: url("../../assets/tree.jpeg");
 }
 
 .search-by-plant-id {
-  background-color: #ff33e9;
+  background-image: url("../../assets/anbu.jpeg");
 }
 
 .widget h2 {
+  position: relative;
+  z-index: 2; /* Ensure the text is above the overlay */
   color: white;
   padding-top: 10%;
   padding-left: 3%;

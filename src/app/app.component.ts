@@ -4,6 +4,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { RetrievePlantRecordsComponent } from './retrieve-plant-records/retrieve-plant-records.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { AllplantdetailsComponent } from './allplantdetails/allplantdetails.component';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +15,7 @@ import { FooterComponent } from './footer/footer.component';
     WelcomeComponent,
     RetrievePlantRecordsComponent,
     FooterComponent,
+    AllplantdetailsComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

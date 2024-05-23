@@ -1,0 +1,55 @@
+.table-container {
+  margin: 20px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-radius: 40px;
+  border-collapse: collapse;
+  border: 2px solid #54b435;
+  background-color: white;
+  color: black;
+  font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
+    sans-serif;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #54b435;
+  color: black;
+  font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
+    sans-serif;
+}
+
+th {
+  background-color: #f2f2f2;
+  color: black;
+  font-size: large;
+  font-weight: 100;
+  font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
+    sans-serif;
+}
+
+tr:hover {
+  background-color: #e0f7e0; /* Light green */
+}
+
+@media screen and (max-width: 600px) {
+  th,
+  td {
+    font-size: 12px;
+    padding: 4px;
+  }
+}
+
+.headline {
+  font-size: 30px;
+  line-height: 1.0714285714;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
+    sans-serif;
+}

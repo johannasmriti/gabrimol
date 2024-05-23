@@ -1,40 +1,28 @@
-.footer {
-  background-color: #e2e2e7;
-  color: black;
-  padding: 20px 0;
+footer {
+  background-color: #333;
+  color: white;
+  text-align: right;
+  padding: 20px;
+  /* width: 100%; */
+  position: relative;
+}
+footer p {
+  margin: 5px 0;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+footer .social-icons {
+  margin-top: 10px;
   text-align: center;
 }
-
-.footer p {
-  font-size: 20px;
-  line-height: 1.0714285714;
-  font-weight: 200;
-  letter-spacing: -0.005em;
-  text-align: left;
-  font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
-    sans-serif;
-  padding-left: 5%;
-}
-
-.footer a {
-  font-size: 20px;
-  line-height: 1.0714285714;
-  font-weight: 200;
-  letter-spacing: -0.005em;
-  text-align: left;
-  font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
-    sans-serif;
-  color: rgb(107, 107, 107);
-}
-
-.headline {
-  text-align: left;
-  font-size: 40px;
-  line-height: 1.0714285714;
-  font-weight: 500;
-  letter-spacing: -0.005em;
-  font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
-    sans-serif;
-  padding-left: 5%;
-  padding-top: 2%;
+footer .social-icons a {
+  margin: 0 10px;
+  color: white;
+  font-size: 1.2em;
 }

@@ -1,0 +1,89 @@
+<h2
+  class="headline"
+  style="padding-top: 100px; padding-right: 100px; text-align: center"
+>
+  All Records
+</h2>
+
+<div class="table-container">
+  <table mat-table [dataSource]="plantData" class="mat-elevation-z8">
+    <!-- Date Column -->
+    <ng-container matColumnDef="Date">
+      <th mat-header-cell *matHeaderCellDef>Date</th>
+      <td mat-cell *matCellDef="let element">{{ element.Date | date }}</td>
+    </ng-container>
+
+    <!-- PlantID Column -->
+    <ng-container matColumnDef="plantID">
+      <th mat-header-cell *matHeaderCellDef>Plant ID</th>
+      <td mat-cell *matCellDef="let element">{{ element.plantID }}</td>
+    </ng-container>
+
+    <!-- PlantName Column -->
+    <ng-container matColumnDef="PlantName">
+      <th mat-header-cell *matHeaderCellDef>Plant Name</th>
+      <td mat-cell *matCellDef="let element">{{ element.PlantName }}</td>
+    </ng-container>
+
+    <!-- Age Column -->
+    <ng-container matColumnDef="Age">
+      <th mat-header-cell *matHeaderCellDef>Age</th>
+      <td mat-cell *matCellDef="let element">{{ element.Age }}</td>
+    </ng-container>
+
+    <!-- Segment Column -->
+    <ng-container matColumnDef="Segment">
+      <th mat-header-cell *matHeaderCellDef>Segment</th>
+      <td mat-cell *matCellDef="let element">{{ element.Segment }}</td>
+    </ng-container>
+
+    <!-- TerraceID Column -->
+    <ng-container matColumnDef="TerraceID">
+      <th mat-header-cell *matHeaderCellDef>Terrace ID</th>
+      <td mat-cell *matCellDef="let element">{{ element.TerraceID }}</td>
+    </ng-container>
+
+    <!-- GPSCoordinate Column -->
+    <ng-container matColumnDef="GPSCoordinate">
+      <th mat-header-cell *matHeaderCellDef>GPS Coordinate</th>
+      <td mat-cell *matCellDef="let element">{{ element.GPSCoordinate }}</td>
+    </ng-container>
+
+    <!-- ToBeFertilised Column -->
+    <ng-container matColumnDef="ToBeFertilised">
+      <th mat-header-cell *matHeaderCellDef>To Be Fertilised</th>
+      <td mat-cell *matCellDef="let element">{{ element.ToBeFertilised }}</td>
+    </ng-container>
+
+    <!-- ToBeWatered Column -->
+    <ng-container matColumnDef="ToBeWatered">
+      <th mat-header-cell *matHeaderCellDef>To Be Watered</th>
+      <td mat-cell *matCellDef="let element">{{ element.ToBeWatered }}</td>
+    </ng-container>
+
+    <!-- ToBeCleaned Column -->
+    <ng-container matColumnDef="ToBeCleaned">
+      <th mat-header-cell *matHeaderCellDef>To Be Cleaned</th>
+      <td mat-cell *matCellDef="let element">{{ element.ToBeCleaned }}</td>
+    </ng-container>
+
+    <!-- FruitingStage Column -->
+    <ng-container matColumnDef="FruitingStage">
+      <th mat-header-cell *matHeaderCellDef>Fruiting Stage</th>
+      <td mat-cell *matCellDef="let element">{{ element.FruitingStage }}</td>
+    </ng-container>
+
+    <!-- Remarks Column -->
+    <ng-container matColumnDef="Remarks">
+      <th mat-header-cell *matHeaderCellDef>Remarks</th>
+      <td mat-cell *matCellDef="let element">{{ element.Remarks }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr
+      mat-row
+      *matRowDef="let row; columns: displayedColumns"
+      class="row"
+    ></tr>
+  </table>
+</div>
