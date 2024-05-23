@@ -6,4 +6,7 @@ export const routes: Routes = [
   { path: '', component: WelcomeComponent },
   { path: 'plant', component: RetrievePlantRecordsComponent },
   { path: 'plant/:plantId', component: RetrievePlantRecordsComponent },
+  // { path: 'all-plant-details', component: AllPlantDetailsComponent },
+  // { path: 'gaby-gallery', component: GabyGalleryComponent },
+  // { path: 'append-plant', component: AppendPlantComponent },
 ];

@@ -1,0 +1,141 @@
+.content-container {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+}
+
+.text-container {
+  flex: 1;
+  padding: 10%;
+}
+
+.image-container {
+  /* flex: 1; */
+  margin-left: 20px; /* Adjust margin as needed */
+}
+
+.rounded-image {
+  margin-top: 90px;
+  margin-bottom: 20px;
+  border-radius: 10px; /* Adjust border-radius as needed */
+  max-height: 500px; /* Ensure image does not exceed container width */
+  width: auto; /* Maintain aspect ratio */
+}
+
+.parallax-container {
+  position: relative;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin: 10%;
+  margin-top: 100px;
+}
+
+.parallax-image {
+  background-image: url("../../assets/Gaby.jpeg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 40px;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: black;
+  text-align: center;
+}
+
+.welcome-para {
+  padding-left: 20%;
+  padding-right: 20%;
+  margin-top: 100px;
+  font-size: 20px;
+  font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  text-align: center;
+}
+
+.headline {
+  font-size: 50px;
+  line-height: 1.0714285714;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
+    sans-serif;
+  padding-left: 10%;
+}
+
+@media screen and (max-width: 768px) {
+  .headline {
+    font-size: 30px; /* Adjust the font size for smaller screens */
+  }
+}
+
+.widget-container {
+  margin-right: 5%;
+  margin-left: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.widget {
+  margin: 10px;
+  width: calc(40% - 20px); /* Adjusted width */
+  height: 400px;
+  width: 250px; /* Fixed height */
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.view-all {
+  background-color: #ff5733;
+}
+
+.modify-records {
+  background-color: #33ffb8;
+}
+
+.append-records {
+  background-color: #337cff;
+}
+
+.search-by-plant-id {
+  background-color: #ff33e9;
+}
+
+.widget h2 {
+  color: white;
+  padding-top: 10%;
+  padding-left: 3%;
+  text-align: left;
+  font-size: 20px;
+  line-height: 1.0714285714;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
+    sans-serif;
+}
+
+@media (max-width: 768px) {
+  .widget {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .widget {
+    width: calc(100% - 20px);
+  }
+}
