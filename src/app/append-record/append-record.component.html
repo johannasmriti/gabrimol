@@ -1,1 +1,106 @@
-<p style="padding: 100px">Coming Soon</p>
+<h1 style="padding-top: 100px; text-align: center">Append New Plant Record</h1>
+<div class="form-container">
+  <form class="form" (ngSubmit)="onSubmit()">
+    <h2>Plant Details</h2>
+    <div class="input-group">
+      <label>Date:</label>
+      <input
+        type="text"
+        [(ngModel)]="newRecord.Date"
+        name="date"
+        class="bright-input"
+      />
+    </div>
+    <div class="input-group">
+      <label>Plant Name:</label>
+      <input
+        type="text"
+        [(ngModel)]="newRecord.PlantName"
+        name="plantName"
+        class="bright-input"
+      />
+    </div>
+    <div class="input-group">
+      <label>Age:</label>
+      <input
+        type="text"
+        [(ngModel)]="newRecord.Age"
+        name="age"
+        class="bright-input"
+      />
+    </div>
+    <div class="input-group">
+      <label>Segment:</label>
+      <input
+        type="text"
+        [(ngModel)]="newRecord.Segment"
+        name="segment"
+        class="bright-input"
+      />
+    </div>
+    <div class="input-group">
+      <label>Terrace ID:</label>
+      <input
+        type="text"
+        [(ngModel)]="newRecord.TerraceID"
+        name="terraceId"
+        class="bright-input"
+      />
+    </div>
+    <div class="input-group">
+      <label>GPS Coordinate:</label>
+      <input
+        type="text"
+        [(ngModel)]="newRecord.GPSCoordinate"
+        name="gpsCoordinate"
+        class="bright-input"
+      />
+    </div>
+    <div class="input-group">
+      <label>To Be Fertilised:</label>
+      <input
+        type="text"
+        [(ngModel)]="newRecord.ToBeFertilised"
+        name="toBeFertilised"
+        class="bright-input"
+      />
+    </div>
+    <div class="input-group">
+      <label>To Be Watered:</label>
+      <input
+        type="text"
+        [(ngModel)]="newRecord.ToBeWatered"
+        name="toBeWatered"
+        class="bright-input"
+      />
+    </div>
+    <div class="input-group">
+      <label>To Be Cleaned:</label>
+      <input
+        type="text"
+        [(ngModel)]="newRecord.ToBeCleaned"
+        name="toBeCleaned"
+        class="bright-input"
+      />
+    </div>
+    <div class="input-group">
+      <label>Fruiting Stage:</label>
+      <input
+        type="text"
+        [(ngModel)]="newRecord.FruitingStage"
+        name="fruitingStage"
+        class="bright-input"
+      />
+    </div>
+    <div class="input-group">
+      <label>Remarks:</label>
+      <input
+        type="text"
+        [(ngModel)]="newRecord.Remarks"
+        name="remarks"
+        class="bright-input"
+      />
+    </div>
+    <button type="submit" class="submit-btn">Submit</button>
+  </form>
+</div>

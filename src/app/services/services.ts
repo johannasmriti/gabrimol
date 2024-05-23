@@ -14,7 +14,7 @@ export class Service {
   constructor(private http: HttpClient) {}
   fetchDataFromGoogleAppsScript(): Observable<any> {
     const url =
-      'https://script.google.com/macros/s/AKfycbyGFAlqGWC_b7sP6tk5DmvvxFnNckDncvnabU_K8c8OUkUUi90uFGDhZ27JJbx7guRZ/exec';
+      'https://script.google.com/macros/s/AKfycbzRZ9MVuApn5ZoUNQ-BfUaioOWRycD0NMib-j7Rg9NzBVld-5J5v3XKvm49Y37KakHO/exec';
     return from(axios.get(url)).pipe(
       map((response: { data: any }) => response.data)
     );
@@ -22,7 +22,7 @@ export class Service {
 
   sendDataToGoogleAppsScript(data: any): Promise<any> {
     const url =
-      'https://script.google.com/macros/s/AKfycbyGFAlqGWC_b7sP6tk5DmvvxFnNckDncvnabU_K8c8OUkUUi90uFGDhZ27JJbx7guRZ/exec';
+      'https://script.google.com/macros/s/AKfycbzRZ9MVuApn5ZoUNQ-BfUaioOWRycD0NMib-j7Rg9NzBVld-5J5v3XKvm49Y37KakHO/exec';
     return fetch(url, {
       redirect: 'follow',
       method: 'POST',
