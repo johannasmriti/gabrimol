@@ -27,6 +27,26 @@ export class AppendRecordComponent {
 
   constructor(private service: Service) {}
 
+  ngOnInit() {
+    this.newRecord.Date = new Date().toISOString().split('T')[0];
+    this.getCurrentLocation();
+  }
+
+  getCurrentLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          this.newRecord.GPSCoordinate = `${position.coords.latitude},${position.coords.longitude}`;
+        },
+        (error) => {
+          console.error('Error getting location', error);
+        }
+      );
+    } else {
+      console.error('Geolocation is not supported by this browser.');
+    }
+  }
+
   onSubmit() {
     this.service
       .sendDataToGoogleAppsScript(this.newRecord)

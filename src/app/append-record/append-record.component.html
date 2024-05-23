@@ -1,7 +1,6 @@
-<h1 style="padding-top: 100px; text-align: center">Append New Plant Record</h1>
-<div class="form-container">
+<div style="padding-top: 100px" class="form-container">
   <form class="form" (ngSubmit)="onSubmit()">
-    <h2>Plant Details</h2>
+    <h2>Append New Plant Record</h2>
     <div class="input-group">
       <label>Date:</label>
       <input
@@ -9,6 +8,7 @@
         [(ngModel)]="newRecord.Date"
         name="date"
         class="bright-input"
+        disabled
       />
     </div>
     <div class="input-group">
@@ -54,6 +54,7 @@
         [(ngModel)]="newRecord.GPSCoordinate"
         name="gpsCoordinate"
         class="bright-input"
+        disabled
       />
     </div>
     <div class="input-group">
