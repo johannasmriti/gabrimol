@@ -151,10 +151,11 @@
   background-image: url("../../assets/anbu.jpeg");
 }
 
-.widget h2 {
+.widget .custom-h2 {
   position: relative;
-  z-index: 2; /* Ensure the text is above the overlay */
+  z-index: 2;
   color: white;
+  text-decoration: none !important;
   padding-top: 10%;
   padding-left: 3%;
   text-align: left;
@@ -176,4 +177,16 @@
   .widget {
     width: calc(100% - 20px);
   }
+}
+
+a.no-underline-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+a.no-underline-link:hover,
+a.no-underline-link:focus,
+a.no-underline-link:active {
+  text-decoration: none;
+  color: inherit;
 }

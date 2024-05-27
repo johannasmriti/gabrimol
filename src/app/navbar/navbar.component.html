@@ -6,17 +6,34 @@
         alt="Gabrimol Icon"
         class="brand-icon"
       />
-      <a routerLink="/home">Gabrimol</a>
+      <a routerLink="" routerLinkActive="active" class="no-underline-link"
+        >Gabrimol</a
+      >
     </div>
     <ul class="navbar-menu" [class.active]="isMenuOpen">
-      <li class="nav-item"><a href="#">Home</a></li>
       <li class="nav-item">
-        <a routerLink="/all-plant-details">All Records</a>
+        <a routerLink="" routerLinkActive="active">Home</a>
       </li>
-      <li class="nav-item"><a href="#">Append a Record</a></li>
+      <li class="nav-item">
+        <a routerLink="/all-plant-details" routerLinkActive="active"
+          >All Records</a
+        >
+      </li>
+      <li class="nav-item">
+        <a routerLink="/append-plant" routerLinkActive="active"
+          >Append a Record</a
+        >
+      </li>
       <li class="search input-item">
-        <input type="text" placeholder="Enter Plant ID" />
-        <button (click)="searchPlant()"><i class="fa fa-search"></i></button>
+        <input
+          type="text"
+          [(ngModel)]="plantId"
+          placeholder="Enter Plant ID"
+          (keydown.enter)="searchPlant()"
+        />
+        <button (click)="searchPlant()">
+          <i class="fa fa-search"></i>
+        </button>
       </li>
     </ul>
     <div class="hamburger-menu" (click)="toggleMenu()">
@@ -26,3 +43,4 @@
     </div>
   </div>
 </nav>
+<router-outlet></router-outlet>

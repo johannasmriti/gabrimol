@@ -174,22 +174,39 @@
     </p>
   </div>
 </div> -->
-<h2 class="headline">Get to Know our App.</h2>
+<h2 class="headline">Key Features.</h2>
 <div class="widget-container">
-  <div class="widget view-all">
-    <h2>View All Records.</h2>
-  </div>
+  <a
+    routerLink="/all-plant-details"
+    routerLinkActive="active"
+    class="no-underline-link"
+  >
+    <div class="widget view-all">
+      <h2 class="custom-h2">View All Records.</h2>
+    </div>
+  </a>
 
-  <div class="widget modify-records">
-    <h2>Modify Records.</h2>
-  </div>
+  <a (click)="navigateToModifyRecords()">
+    <div class="widget modify-records">
+      <h2 class="custom-h2">Modify Records.</h2>
+    </div>
+  </a>
 
-  <div class="widget append-records">
-    <h2>Append Records.</h2>
-  </div>
+  <a
+    routerLink="/append-plant"
+    routerLinkActive="active"
+    class="no-underline-link"
+  >
+    <div class="widget append-records">
+      <h2 class="custom-h2">Append Records.</h2>
+    </div>
+  </a>
 
-  <div class="widget search-by-plant-id">
-    <h2>Search via PlantID.</h2>
-  </div>
+  <a (click)="navigateToSearch()">
+    <div class="widget search-by-plant-id">
+      <h2 class="custom-h2">Search via PlantID.</h2>
+    </div>
+  </a>
 </div>
 <br /><br /><br />
+<router-outlet></router-outlet>

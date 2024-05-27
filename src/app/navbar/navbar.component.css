@@ -118,3 +118,15 @@
 .search button i {
   color: black;
 }
+
+a.no-underline-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+a.no-underline-link:hover,
+a.no-underline-link:focus,
+a.no-underline-link:active {
+  text-decoration: none;
+  color: inherit;
+}

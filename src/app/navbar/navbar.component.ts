@@ -9,13 +9,19 @@ import {
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [FormsModule, CommonModule, RouterOutlet],
+  imports: [
+    FormsModule,
+    CommonModule,
+    RouterOutlet,
+    RouterLinkActive,
+    RouterLink,
+  ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css',
 })
@@ -40,9 +46,12 @@ export class NavbarComponent {
   constructor(private router: Router) {}
 
   searchPlant() {
-    console.log(this.plantId);
     if (this.plantId) {
-      this.router.navigate(['/plant', this.plantId]);
+      const plantId = this.plantId;
+      this.plantId = '';
+      this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
+        this.router.navigate([`/plant/${plantId}`]);
+      });
     }
   }
 }

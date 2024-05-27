@@ -1,5 +1,11 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, RouterModule, RouterOutlet } from '@angular/router';
+import {
+  ActivatedRoute,
+  RouterLink,
+  RouterLinkActive,
+  RouterModule,
+  RouterOutlet,
+} from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { Service } from '../services/services';
 import { CommonModule } from '@angular/common';
@@ -7,7 +13,13 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-retrieve-plant-records',
   standalone: true,
-  imports: [FormsModule, CommonModule, RouterOutlet],
+  imports: [
+    FormsModule,
+    CommonModule,
+    RouterOutlet,
+    RouterLink,
+    RouterLinkActive,
+  ],
   templateUrl: './retrieve-plant-records.component.html',
   styleUrl: './retrieve-plant-records.component.css',
 })
