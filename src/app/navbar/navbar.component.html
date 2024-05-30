@@ -1,18 +1,33 @@
 <nav class="navbar" [ngClass]="{ hidden: isNavbarHidden }">
   <div class="navbar-container">
     <div style="font-size: 20px; font-weight: bolder" class="brand">
-      <img
-        src="../../assets/gabyProfile.jpeg"
-        alt="Gabrimol Icon"
-        class="brand-icon"
-      />
-      <a routerLink="" routerLinkActive="active" class="no-underline-link"
+      <a
+        routerLink=""
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        <img
+          src="../../assets/gabyProfile.jpeg"
+          alt="Gabrimol Icon"
+          class="brand-icon"
+        />
+      </a>
+      <a
+        routerLink=""
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="no-underline-link"
         >Gabrimol</a
       >
     </div>
     <ul class="navbar-menu" [class.active]="isMenuOpen">
       <li class="nav-item">
-        <a routerLink="" routerLinkActive="active">Home</a>
+        <a
+          routerLink=""
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Home</a
+        >
       </li>
       <li class="nav-item">
         <a routerLink="/all-plant-details" routerLinkActive="active"

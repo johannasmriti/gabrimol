@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterModule, RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { RetrievePlantRecordsComponent } from './retrieve-plant-records/retrieve-plant-records.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { AllplantdetailsComponent } from './allplantdetails/allplantdetails.component';
 import { AppendRecordComponent } from './append-record/append-record.component';
-import { routes } from './app.routes';
 
 @Component({
   selector: 'app-root',

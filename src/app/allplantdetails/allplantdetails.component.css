@@ -19,25 +19,25 @@ td {
   padding: 8px;
   text-align: left;
   border-bottom: 1px solid #54b435;
-  border-right: 1px solid #54b435; /* Add vertical lines */
+  border-right: 1px solid #54b435;
   color: black;
   font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
     sans-serif;
 }
 
 .blue-heading {
-  color: blue; /* Change color to blue */
+  color: blue;
 }
 
 ::ng-deep .mat-header-cell {
-  background-color: #54b435; /* Your desired background color */
-  color: white; /* Text color */
+  background-color: #54b435;
+  color: white;
   font-size: large;
   font-weight: bold;
 }
 
 tr:hover {
-  background-color: #e0f7e0; /* Light green */
+  background-color: #e0f7e0;
 }
 
 @media screen and (max-width: 600px) {
@@ -55,4 +55,16 @@ tr:hover {
   letter-spacing: -0.005em;
   font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
     sans-serif;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.mat-spinner {
+  width: 50px;
+  height: 50px;
 }

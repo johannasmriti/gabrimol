@@ -3,12 +3,12 @@ import {
   ActivatedRoute,
   RouterLink,
   RouterLinkActive,
-  RouterModule,
   RouterOutlet,
 } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { Service } from '../services/services';
 import { CommonModule } from '@angular/common';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @Component({
   selector: 'app-retrieve-plant-records',
@@ -19,6 +19,7 @@ import { CommonModule } from '@angular/common';
     RouterOutlet,
     RouterLink,
     RouterLinkActive,
+    MatProgressSpinnerModule,
   ],
   templateUrl: './retrieve-plant-records.component.html',
   styleUrl: './retrieve-plant-records.component.css',
@@ -27,6 +28,7 @@ export class RetrievePlantRecordsComponent {
   public plantId!: string | null;
   plantData: any[] = [];
   public foundRow: any = null;
+  loading = true;
 
   constructor(private route: ActivatedRoute, private Service: Service) {}
 
@@ -59,6 +61,7 @@ export class RetrievePlantRecordsComponent {
           console.log('Plant ID not found');
         }
       }
+      this.loading = false;
     });
   }
 

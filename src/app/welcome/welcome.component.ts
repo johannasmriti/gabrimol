@@ -7,13 +7,6 @@ import {
   RouterOutlet,
 } from '@angular/router';
 import { NavbarComponent } from '../navbar/navbar.component';
-import {
-  animate,
-  state,
-  style,
-  transition,
-  trigger,
-} from '@angular/animations';
 
 @Component({
   selector: 'app-welcome',

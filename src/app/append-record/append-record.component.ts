@@ -2,17 +2,19 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Service } from '../services/services';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-append-record',
   standalone: true,
   imports: [FormsModule, CommonModule],
   templateUrl: './append-record.component.html',
-  styleUrl: './append-record.component.css',
+  styleUrls: ['./append-record.component.css'],
 })
 export class AppendRecordComponent {
   newRecord: any = {
     Date: '',
+    plantID: '',
     PlantName: '',
     Age: '',
     Segment: '',
@@ -25,7 +27,7 @@ export class AppendRecordComponent {
     Remarks: '',
   };
 
-  constructor(private service: Service) {}
+  constructor(private service: Service, private router: Router) {}
 
   ngOnInit() {
     this.newRecord.Date = new Date().toISOString().split('T')[0];
@@ -50,8 +52,8 @@ export class AppendRecordComponent {
   onSubmit() {
     this.service
       .sendDataToGoogleAppsScript(this.newRecord)
-      .then((response) => {
-        console.log('Record added successfully', response);
+      .then((response: string) => {
+        console.log(response);
         alert(response);
       })
       .catch((error) => {

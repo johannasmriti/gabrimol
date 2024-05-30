@@ -1,7 +1,7 @@
 .content-container {
   display: flex;
-  /* justify-content: space-between; */
   align-items: center;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 .text-container {
@@ -10,16 +10,15 @@
 }
 
 .image-container {
-  /* flex: 1; */
-  margin-left: 20px; /* Adjust margin as needed */
+  margin-left: 20px;
 }
 
 .rounded-image {
   margin-top: 90px;
   margin-bottom: 20px;
-  border-radius: 10px; /* Adjust border-radius as needed */
-  max-height: 500px; /* Ensure image does not exceed container width */
-  width: auto; /* Maintain aspect ratio */
+  border-radius: 10px;
+  max-height: 500px;
+  width: auto;
 }
 
 .parallax-container {
@@ -64,29 +63,32 @@
 }
 
 .about-us {
-  /* max-width: 1000px;
-  margin: 50px auto; */
   padding: 5%;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
+
 .about-us h1 {
   font-size: 2.5em;
   color: #4caf50;
 }
+
 .about-us p {
   font-size: 1.2em;
   line-height: 1.6;
   margin: 20px 0;
 }
+
 .about-us .highlight {
   color: #ff6347;
 }
+
 .about-us .emoji {
   font-size: 1.5em;
 }
+
 .headline {
   font-size: 50px;
   line-height: 1.0714285714;
@@ -99,9 +101,10 @@
 
 @media screen and (max-width: 768px) {
   .headline {
-    font-size: 30px; /* Adjust the font size for smaller screens */
+    font-size: 30px;
   }
 }
+
 .widget-container {
   margin-right: 5%;
   margin-left: 5%;
@@ -111,16 +114,20 @@
 }
 
 .widget {
+  cursor: pointer;
   position: relative;
   margin: 10px;
-  width: 250px; /* Fixed width */
-  height: 400px; /* Fixed height */
+  width: 250px;
+  height: 400px;
+  display: flex; /* Use flexbox for alignment */
   align-items: center;
   justify-content: center;
   text-align: center;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  overflow: hidden; /* Ensure content doesn't overflow the border radius */
+  overflow: hidden;
+  background-size: cover; /* Ensure background images cover the entire widget */
+  background-position: center; /* Center the background images */
 }
 
 .widget::before {
@@ -130,9 +137,9 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Black color with 50% opacity */
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
-  border-radius: 10px; /* Match the border radius of the widget */
+  border-radius: 10px;
 }
 
 .view-all {
@@ -168,14 +175,24 @@
 }
 
 @media (max-width: 768px) {
+  .widget-container {
+    display: block; /* Stack widgets vertically */
+  }
   .widget {
-    width: calc(50% - 20px);
+    width: 100%; /* Full width for each widget */
+    height: auto; /* Adjust height to content */
+    margin-bottom: 20px; /* Space between widgets */
+  }
+  .widget .custom-h2 {
+    font-size: 18px; /* Adjust font size for smaller screens */
+    padding-top: 5%;
   }
 }
 
 @media (max-width: 480px) {
-  .widget {
-    width: calc(100% - 20px);
+  .widget .custom-h2 {
+    font-size: 16px; /* Further adjust font size for very small screens */
+    padding-top: 5%;
   }
 }
 
