@@ -8,7 +8,7 @@ import axios from 'axios';
 })
 export class Service {
   scriptUrl =
-    'https://script.google.com/macros/s/AKfycbyA7fC6YRh9GA-7jtLXiV9pwHWpzMZFyu2M5iUV-3013Cgl5K12mklIbScB1n82KTP3/exec';
+    'https://script.google.com/macros/s/AKfycbzRZ9MVuApn5ZoUNQ-BfUaioOWRycD0NMib-j7Rg9NzBVld-5J5v3XKvm49Y37KakHO/exec';
   constructor(private http: HttpClient) {}
   fetchDataFromGoogleAppsScript(): Observable<any> {
     return from(axios.get(this.scriptUrl)).pipe(
