@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {
   ActivatedRoute,
   RouterLink,
@@ -24,7 +24,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
   templateUrl: './retrieve-plant-records.component.html',
   styleUrl: './retrieve-plant-records.component.css',
 })
-export class RetrievePlantRecordsComponent {
+export class RetrievePlantRecordsComponent implements OnInit {
   public plantId!: string | null;
   plantData: any[] = [];
   public foundRow: any = null;
@@ -43,7 +43,6 @@ export class RetrievePlantRecordsComponent {
   fetchData() {
     this.Service.fetchDataFromGoogleAppsScript().subscribe((data: any[]) => {
       this.plantData = data;
-      console.log('Data: ' + data);
       console.log('Data: ' + JSON.stringify(this.plantData));
       if (this.plantData !== null) {
         console.log('Length: ' + this.plantData.length);
@@ -57,12 +56,45 @@ export class RetrievePlantRecordsComponent {
         }
         if (this.foundRow) {
           console.log('Row found:', this.foundRow);
+          this.updateGPSLocation(); // Update GPS location
         } else {
           console.log('Plant ID not found');
         }
       }
       this.loading = false;
     });
+  }
+
+  updateGPSLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const latitude = position.coords.latitude;
+          const longitude = position.coords.longitude;
+          console.log('Current GPS Position:', latitude, longitude);
+
+          const gpsCoordinates = `${latitude},${longitude}`;
+
+          if (this.foundRow) {
+            this.foundRow.GPSCoordinate = gpsCoordinates;
+            console.log('Updated Row with GPS:', this.foundRow);
+    
+            this.Service.sendDataToGoogleAppsScript(this.foundRow)
+            .then((response) => {
+              console.log('Update successful', response);
+            })
+            .catch((error) => {
+              console.error('Update failed', error);
+            });
+          }
+        },
+        (error) => {
+          console.error('Error getting GPS location:', error);
+        }
+      );
+    } else {
+      console.error('Geolocation is not supported by this browser.');
+    }
   }
 
   onSubmit() {
